@@ -55,7 +55,7 @@ if(WITH_DPDK)
     async/dpdk/TCP.cc
     async/dpdk/UserspaceEvent.cc
     async/dpdk/ethernet.cc)
-  add_library(common_async_dpdk STATIC
+  add_library(common_async_dpdk SHARED
     ${async_dpdk_srcs})
   target_link_libraries(common_async_dpdk PRIVATE
     dpdk::dpdk)
